@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'blog.apps.BlogConfig',
+    'bootstrap'
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static' # чтобы статика работа при деплое, нужно выполнять следующую команду:
+# python manage.py collectstatic
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
