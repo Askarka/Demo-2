@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def flow(request):
+    return render(request, 'blog/flow.html')

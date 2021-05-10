@@ -1,2 +1,2 @@
 django~=3.1
-django-bootstrap-static~=4.2.1
+django-bootstrap-static~=4.1.3
