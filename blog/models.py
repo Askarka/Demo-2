@@ -15,6 +15,11 @@ class PostImage(models.Model):
     image = models.ImageField('Изображение', upload_to='images')
     description = models.CharField(verbose_name='Описание картинки', max_length=100)
 
+    @property
+    def image_url(self):
+        if self.image and hasattr(self.image, 'url'):
+            return self.image.url
+
     # Чтобы выбрать все товары вместе с их изображениями используйте prefetch_related:
     # qs = Product.objects.all().prefetch_related('images')
     # Тогда в цикле вы сможете перебрать товары следующим образом:
