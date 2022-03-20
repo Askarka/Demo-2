@@ -1,1 +1,1 @@
-ITIS Django project
+ITIS lessons homework Django project
